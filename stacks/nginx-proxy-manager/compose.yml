@@ -12,3 +12,9 @@ services:
     volumes:
       - /home/mujtaba/homelab/data/nginx-proxy-manager:/data
       - /home/mujtaba/homelab/data/letsencrypt:/etc/letsencrypt
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true
