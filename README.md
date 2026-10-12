@@ -1,6 +1,10 @@
 # Homelab
 
-self-hosted ubuntu homelab using Docker Compose
+self-hosted dell ubuntu homelab using Docker Compose
+
+## Servers
+- Dell OptiPlex 3070 Micro, i5-9500T, 2.2 GHz, 16GB RAM, 512GB SSD
+- HP EliteDesk 800 G4 Mini, i5-8500T, 2.1 GHz, 16GB RAM, 256GB NVMe SSD 
 
 ## Services
 | Service | Port | URL |
@@ -10,18 +14,13 @@ self-hosted ubuntu homelab using Docker Compose
 | Uptime Kuma | 3001 | http://SERVER_IP:3001 |
 | Homepage | 3000 | http://SERVER_IP:3000 |
 
+Other services ('payslips', 'studyflow', etc) are in separate repos.
+
 ## Structure
 - `compose.yml` starts every stack at once
 - `stacks/` one compose file per service
 - `data/` persistent app data (git-ignored, created on first start)
 
-## Setup
-```bash
-git clone <this repo> ~/homelab
-cd ~/homelab
-cp .env.example .env              # then edit HOMEPAGE_ALLOWED_HOSTS
-docker network create homelab     # one time only
-docker compose up -d
 ```
 
 ## Everyday commands
@@ -34,8 +33,7 @@ docker compose down                      # stop everything
 ```
 
 ## Keeping it running
-Containers use `restart: always`, so they come back after a crash or reboot
-as long as Docker itself starts on boot:
+
 ```bash
 sudo systemctl enable docker
 ```
