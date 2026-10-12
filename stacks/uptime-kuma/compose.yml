@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   uptime-kuma:
     image: louislam/uptime-kuma:latest
@@ -8,7 +6,7 @@ services:
     ports:
       - "3001:3001"
     volumes:
-      - /home/mujtaba/homelab/data/uptime-kuma:/app/data
+      - ../../data/uptime-kuma:/app/data
     networks:
       - homelab
 
