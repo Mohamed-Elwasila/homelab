@@ -21,8 +21,6 @@ Other services ('payslips', 'studyflow', etc) are in separate repos.
 - `stacks/` one compose file per service
 - `data/` persistent app data (git-ignored, created on first start)
 
-```
-
 ## Everyday commands
 Run from the repo root:
 ```bash
