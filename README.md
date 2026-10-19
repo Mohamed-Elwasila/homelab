@@ -13,6 +13,7 @@ self-hosted dell ubuntu homelab using Docker Compose
 | Portainer | 9443 (https), 9000 (http) | https://SERVER_IP:9443 |
 | Uptime Kuma | 3001 | http://SERVER_IP:3001 |
 | Homepage | 3000 | http://SERVER_IP:3000 |
+| Jellyfin | 8096 | http://SERVER_IP:8096 |
 
 Other services ('payslips', 'studyflow', etc) are in separate repos.
 

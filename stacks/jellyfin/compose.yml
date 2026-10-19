@@ -1,0 +1,22 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:12.2
+    container_name: jellyfin
+    restart: always
+    ports:
+      - "8096:8096"
+    volumes:
+      - ../../data/jellyfin/config:/config
+      - ../../data/jellyfin/cache:/cache
+      - ${MEDIA_PATH:-../../data/media}:/media:ro
+    # Intel QuickSync hardware transcoding
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - "${RENDER_GID:-992}"
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true

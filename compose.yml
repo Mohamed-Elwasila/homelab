@@ -4,3 +4,4 @@ include:
   - stacks/portainer/compose.yml
   - stacks/uptime-kuma/compose.yml
   - stacks/homepage/compose.yml
+  - stacks/jellyfin/compose.yml
