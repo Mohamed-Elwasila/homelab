@@ -16,6 +16,14 @@ self-hosted dell ubuntu homelab using Docker Compose
 
 Other services ('payslips', 'studyflow', etc) are in separate repos.
 
+## Setup
+Run once from the repo root:
+```bash
+cp .env.example .env              # then edit .env
+docker network create homelab     # shared network every stack joins
+docker compose up -d
+```
+
 ## Structure
 - `compose.yml` starts every stack at once
 - `stacks/` one compose file per service
