@@ -5,4 +5,5 @@ include:
   - stacks/uptime-kuma/compose.yml
   - stacks/homepage/compose.yml
   - stacks/jellyfin/compose.yml
+  - stacks/excalidraw/compose.yml
   - stacks/kavita/compose.yml
