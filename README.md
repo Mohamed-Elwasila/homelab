@@ -15,6 +15,7 @@ self-hosted dell ubuntu homelab using Docker Compose
 | Homepage | 3000 | http://SERVER_IP:3000 |
 | Jellyfin | 8096 | http://SERVER_IP:8096 |
 | Excalidraw | 3002 | http://SERVER_IP:3002 |
+| Kavita | 5000 | http://SERVER_IP:5000 |
 
 Other services ('payslips', 'studyflow', etc) are in separate repos.
 
