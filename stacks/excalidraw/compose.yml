@@ -1,0 +1,14 @@
+services:
+  excalidraw:
+    # No version tags are published, so this pins the current latest by digest.
+    image: excalidraw/excalidraw:latest@sha256:f7ee194addd607bf831d2af0f0a34463dd4225e426cf35199ef0b12a803398e9
+    container_name: excalidraw
+    restart: always
+    ports:
+      - "3002:80"
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true
