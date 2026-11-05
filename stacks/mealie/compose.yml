@@ -1,0 +1,22 @@
+services:
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:v3.30.0
+    container_name: mealie
+    restart: always
+    ports:
+      - "9925:9000"
+    volumes:
+      - ../../data/mealie:/app/data
+    environment:
+      ALLOW_SIGNUP: "false"
+      BASE_URL: ${MEALIE_BASE_URL:-http://localhost:9925}
+    deploy:
+      resources:
+        limits:
+          memory: 1000M
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true
